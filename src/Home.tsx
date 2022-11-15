@@ -30,6 +30,7 @@ import { MintCountdown } from "./MintCountdown";
 import { MintButton } from "./MintButton";
 import { GatewayProvider } from "@civic/solana-gateway-react";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+import logo from "./logo.png";
 
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
@@ -487,8 +488,12 @@ const Home = (props: HomeProps) => {
   }, [refreshCandyMachineState]);
 
   return (
-    <Container style={{ marginTop: 100 }}>
+    <Container>
       <Container maxWidth="xs" style={{ position: "relative" }}>
+      <Container style={{ marginTop: 100, marginBottom: 100 }}>
+        <img width="100%" src={logo}/>
+      </Container>
+
         <Paper
           style={{
             padding: 24,
@@ -639,14 +644,6 @@ const Home = (props: HomeProps) => {
               </MintContainer>
             </>
           )}
-          <Typography
-            variant="caption"
-            align="center"
-            display="block"
-            style={{ marginTop: 7, color: "grey" }}
-          >
-            Powered by METAPLEX
-          </Typography>
         </Paper>
       </Container>
 
